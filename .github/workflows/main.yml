@@ -16,8 +16,7 @@ jobs:
 
       - name: Set up Xcode
         run: sudo xcode-select -s /Applications/Xcode.app
-- name: List workspace files
-  run: ls -l CDImplementation
+
       - name: Install CocoaPods (if needed)
         run: |
           cd CDImplementation
