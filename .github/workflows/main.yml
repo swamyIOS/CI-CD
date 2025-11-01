@@ -24,9 +24,13 @@ jobs:
       - name: Build for simulator
         run: |
               xcodebuild clean build \
-              -workspace CDImplementation/CDImplementation.xcworkspace \
-              -scheme CDImplementation \
-              -destination 'platform=iOS Simulator,name=iPhone 18.4'
+               -workspace CDImplementation/CDImplementation.xcworkspace \
+               -scheme CDImplementation \
+                -sdk iphoneos \
+                -configuration Release \
+                 CODE_SIGN_IDENTITY="" \
+                 CODE_SIGNING_REQUIRED=NO \
+                 CODE_SIGNING_ALLOWED=NO
 
       - name: Run Unit Tests
         run: |
